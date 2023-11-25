@@ -86,33 +86,11 @@ Basic Queries in MongoDB:
       
       filters few records:
         db.<collection-name>.find(<query>);
-          query is simple dictionary with key value pair 
-    
-    
+          query is simple dictionary with key value pair
 
-Todos:
-Find all the information about each todos
-  db.todos.find();
-Find the todos which are completed
-  db.todos.find({ completed: true });
+Task:
 
-find the todos where userId is greater then 5
-  db.todos.find({ userId: { $gt: 5 } });
+  Day 31:
+    MongoDB Day 1: https://docs.google.com/document/d/1yfQTicBMNV7thyzewyYSJWhTNw0pC4AkVhMGVCIP0LU/edit
 
-Find the todos for userId between 5 to 8:
-  { userId: { $gte: 5, $lte: 8 } }
-
-Find only the todos title and completed status
-  db.todos.find({ }, { title: 1, completed: 1, '_id': 0 });
-
-Find the todos of userId of 10
-  { userId: 10 }
-
-Find the todos of userId which is not 10
-  { userId: { $ne: 10} }
-
-Find all todos which contain the userId in [8, 6, 4, 3]
-  { userId: {$in: [8, 6, 4, 3] } }, { userId: {$nin: [1, 2, 5, 7, 9, 10] } }
-
-List first four todos of userid 10
-  db.todos.find( { userId: 10 }, { }, { limit: 4  } );
+    Question 10 is optional
